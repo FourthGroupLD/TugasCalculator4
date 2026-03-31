@@ -1,13 +1,21 @@
 #include <stdio.h>
 
-int main() {
-    printf("=====================================\n");
-    printf("    KALKULATOR KEUANGAN MAHASISWA    \n");
-    printf("=====================================\n");
-    printf("Pilih Menu Helper:\n");
-    printf("1. Discount Counter\n");
-    printf("2. Split Bill\n");
-    printf("3. Savings Interest\n");
-    printf("4. Allowance Leftover\n");
+void kalkulatorK(){
+    int uangSaku, pengeluaran, sisa;
+    char benda[10];
+
+    printf("Masukkan Uang Saku : ");
+    scanf("%d", &uangSaku);
+
+    printf("Estimasi Total Pengeluaran Hari ini :");
+    scanf("%d", &pengeluaran);
+
+    sisa=uangSaku-pengeluaran;
+
+    printf("sisa uang saku adalah %d", sisa);
+}
+
+int main (){
+    kalkulatorK ();
     return 0;
 }
