@@ -39,19 +39,21 @@ void splitBill() {
     float totalTagihan, perOrang;
     int jumlahOrang;
 
-    printf("\n=== KALKULATOR SPLIT BILL / PATUNGAN ===\n");
-    printf("Masukkan total tagihan makan: Rp ");
+    printf( CYN "\n=== Kalkulator Split Bill / Patungan ===\n" RESET );
+
+    printf( RED "Masukkan total tagihan makan: Rp " RESET );
     scanf("%f", &totalTagihan);
 
-    printf("Masukkan jumlah orang: ");
+    printf( GRN "Masukkan jumlah orang: " RESET );
     scanf("%d", &jumlahOrang);
 
     if (jumlahOrang > 0) {
         perOrang = totalTagihan / jumlahOrang;
+
         printf("\n--- Rincian ---\n");
         printf("Total Tagihan : Rp %.2f\n", totalTagihan);
         printf("Jumlah Orang  : %d\n", jumlahOrang);
-        printf("Per Orang     : Rp %.2f\n", perOrang);
+        printf("Setiap orang harus membayar: Rp %.2f\n", perOrang);
         printf("=================================\n\n");
     } else {
         printf("\nJumlah orang tidak valid!\n\n");
