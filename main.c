@@ -58,19 +58,28 @@ void splitBill() {
     }
 }
 
-void kalkulatorSaku() {
-    int uangSaku, pengeluaran, sisa;
+#include <stdio.h>
 
-    printf("\n=== KALKULATOR UANG SAKU ===\n");
-    printf("Masukkan Uang Saku : Rp ");
+void kalkulatorSaku(){
+    int uangSaku, pengeluaran, sisa;
+    char benda[10];
+
+    printf("Masukkan Uang Saku : ");
     scanf("%d", &uangSaku);
 
-    printf("Estimasi Total Pengeluaran Hari ini : Rp ");
+    printf("Estimasi Total Pengeluaran Hari ini :");
     scanf("%d", &pengeluaran);
 
-    sisa = uangSaku - pengeluaran;
-    printf("Sisa uang saku adalah Rp %d\n", sisa);
+    if (uangSaku<pengeluaran){
+        printf("Pengeluaran melebihi Uang Saku");
+    }
+    else {
+        sisa=uangSaku-pengeluaran;
+        printf("sisa uang saku adalah %d", sisa);
+    }
+
 }
+
 
 #define BLK "\e[0;30m"
 #define RED "\e[0;31m"
