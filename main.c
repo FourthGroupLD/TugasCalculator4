@@ -10,9 +10,14 @@ void kalkulatorK(){
     printf("Estimasi Total Pengeluaran Hari ini :");
     scanf("%d", &pengeluaran);
 
-    sisa=uangSaku-pengeluaran;
+    if (uangSaku<pengeluaran){
+        printf("Pengeluaran melebihi Uang Saku");
+    }
+    else {
+        sisa=uangSaku-pengeluaran;
+        printf("sisa uang saku adalah %d", sisa);
+    }
 
-    printf("sisa uang saku adalah %d", sisa);
 }
 
 int main (){
