@@ -14,8 +14,10 @@
 void kalkulatorBunga() {
     float saldoAwal, bunga, totalAkhir;
 
-    printf("\n=== KALKULATOR BUNGA TABUNGAN SEDERHANA ===\n");
-    printf("Masukkan saldo awal: Rp ");
+    printf(GRN "========================================\n" RESET);
+    printf(YEL "    KALKULATOR BUNGA TABUNGAN SEDERHANA    \n" RESET);
+    printf(GRN "========================================\n" RESET);
+    printf("Masukkan saldo awal: ");
     scanf("%f", &saldoAwal);
 
     printf("Masukkan bunga bulanan (%%): ");
@@ -25,6 +27,7 @@ void kalkulatorBunga() {
 
     printf("Total saldo tabungan setelah bunga: Rp %.2f\n", totalAkhir);
 }
+
 
 void kalkulatorDiskon() {
     float hargaAwal, persentaseDiskon, hargaAkhir, nominalDiskon;
@@ -70,8 +73,6 @@ void splitBill() {
         printf("\nJumlah orang tidak valid!\n\n");
     }
 }
-
-#include <stdio.h>
 
 void kalkulatorSaku(){
     int uangSaku, pengeluaran, sisa;
